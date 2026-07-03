@@ -1,0 +1,20 @@
+.card {
+  border-radius: 16px;
+  height: auto;
+  background-color: aliceblue;
+  padding: 10px;
+  text-align: start;
+  color: black;
+}
+
+.card img {
+  width: 20vw;
+  max-height: 40vh;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.card-footer {
+  display: flex;
+}
+.price {
+}
