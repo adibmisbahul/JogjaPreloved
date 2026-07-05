@@ -6,7 +6,7 @@ const Card = (props) => {
     <article className="card">
       <img src={image} alt={title} />
       <h3>{title}</h3>
-      <p>{description}</p>
+      <p className="desc">{description}</p>
       <div className="card-footer">
         <p className="price">{price}</p>
         <button>View</button>
