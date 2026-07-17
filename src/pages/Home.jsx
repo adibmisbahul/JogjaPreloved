@@ -3,6 +3,7 @@ import Card from "../components/card";
 import { useState, useEffect } from "react";
 import data from "../assets/dumyData";
 import { CiSearch } from "react-icons/ci";
+import axios from "axios"
 
 const Home = () => {
   const [product, setProduct] = useState(data);
@@ -44,7 +45,7 @@ const Home = () => {
               <a href="#">Kategori</a>
             </li>
             <li>
-              <a href="#">Jual</a>
+              <a href="/dashboard">Jual</a>
             </li>
             <li>
               <a href="#">Login</a>
