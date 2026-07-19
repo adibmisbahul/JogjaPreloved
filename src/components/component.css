@@ -1,4 +1,18 @@
-.card-dashboard{
-    text-align: start;
-    border: solid green 1px;
+.card-dashboard {
+  width: 200px;
+  max-width: 200px;
+  text-align: start;
+  border: solid grey 1px;
+  border-radius: 2px;
+  color: black;
+  padding: 4px;
+}
+
+.card-dashboard h2 {
+  color: black;
+}
+
+.card-dashboard p {
+  font-size: small;
+  color: grey;
 }

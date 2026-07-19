@@ -5,6 +5,15 @@
   background-color: var(--bg);
 }
 
+.header-dashboard {
+  max-width: 850px;
+  margin: 0 auto;
+  padding-top: 10px;
+  height: auto;
+  /* background-color: aqua; */
+}
+
 .main-card {
+  justify-content: space-between;
   display: flex;
 }
