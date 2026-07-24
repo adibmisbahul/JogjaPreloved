@@ -8,21 +8,23 @@ import { AgGridProvider } from "ag-grid-react";
 import { AgGridReact } from "ag-grid-react";
 
 const Dashboard = () => {
-  const [sale, setSale] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const jualProduct = () => {
-    alert("click");
+    if (isModalOpen == true) {
+      setIsModalOpen(false);
+    } else {
+      setIsModalOpen(true);
+    }
   };
   const modules = [AllCommunityModule];
 
-  // Row Data: The data to be displayed.
   const [rowData, setRowData] = useState([
     { make: "Tesla", model: "Model Y", price: 64950, electric: true },
     { make: "Ford", model: "F-Series", price: 33850, electric: false },
     { make: "Toyota", model: "Corolla", price: 29600, electric: false },
   ]);
 
-  // Column Definitions: Defines the columns to be displayed.
   const [colDefs, setColDefs] = useState([
     { field: "make" },
     { field: "model" },
@@ -57,18 +59,25 @@ const Dashboard = () => {
         </div>
       </header>
       <main className="main-dashboard">
-        <button onClick={jualProduct}>jual</button>
-        {sale
-          ? () => {
-              return;
-            }
-          : () => {}}
-        <AgGridProvider modules={modules}>
-          {/* Data Grid will fill the size of the parent container */}
+        <button onClick={jualProduct} style={{ width: "100%" }}>
+          sale product
+        </button>
+        {isModalOpen && (
+          <div className="box-modal">
+            <input type="text" placeholder="exp:Iphone 13 promax" />
+            <input type="text" placeholder="exp:1300000" />
+            <input type="text" placeholder="exp:Iphone 13 promax 128gb" />
+            <input type="text" placeholder="image url" />
+            <button onClick={jualProduct} style={{ width: "100%" }}>
+              sale
+            </button>
+          </div>
+        )}
+        {/* <AgGridProvider modules={modules}>
           <div style={{ height: 500 }}>
             <AgGridReact rowData={rowData} columnDefs={colDefs} />
           </div>
-        </AgGridProvider>
+        </AgGridProvider> */}
       </main>
     </div>
   );

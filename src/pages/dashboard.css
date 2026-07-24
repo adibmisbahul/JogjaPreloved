@@ -17,3 +17,36 @@
   justify-content: space-between;
   display: flex;
 }
+
+.main-dashboard {
+  margin: 0 auto;
+  height: auto;
+  max-width: 850px;
+  margin-top: 8px;
+}
+
+.main-dashboard button {
+  width: 100%;
+  background-color: #155dfc;
+  border: none;
+  border-radius: 4px;
+  height: 32px;
+}
+
+.box-modal {
+  margin-top: 2px;
+  padding: 8px;
+  height: 250px;
+  border-radius: 4px;
+  border: solid grey 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.box-modal input {
+  background-color: transparent;
+  border: solid black 1px;
+  border-radius: 2px;
+  height: 32px;
+}

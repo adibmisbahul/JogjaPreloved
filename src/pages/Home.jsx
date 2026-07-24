@@ -3,7 +3,7 @@ import Card from "../components/card";
 import { useState, useEffect } from "react";
 import data from "../assets/dumyData";
 import { CiSearch } from "react-icons/ci";
-import axios from "axios"
+import axios from "axios";
 
 const Home = () => {
   const [product, setProduct] = useState(data);
@@ -18,39 +18,36 @@ const Home = () => {
 
   return (
     <>
-      <header class="header">
-        <nav class="navbar">
-          <h1 class="logo">JogjaPreloved</h1>
-          <form class="search">
-            <input
-              type="text"
-              placeholder="Cari produk..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key == " Enter") {
-                  searchProduct();
-                }
-              }}
-            />
-          </form>
-          <button onClick={searchProduct}>
-            <CiSearch />
-          </button>
-          <ul class="nav-menu">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Kategori</a>
-            </li>
-            <li>
-              <a href="/dashboard">Jual</a>
-            </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
+      <header className="header">
+        <nav className="navbar">
+          <span>
+            <h2>JogjaPreloved</h2>
+          </span>
+          <div className="navigation">
+            <div className="search">
+              <input type="text" />
+              <CiSearch />
+            </div>
+            <ul>
+              <li>
+                <a href="">Home</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/dashboard">Dashboard</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="">setting</a>
+              </li>
+            </ul>
+          </div>
+          <span className="account">
+            <h2>signin</h2>
+            <button>signup</button>
+          </span>
         </nav>
       </header>
       <main className="home">
